@@ -1,17 +1,23 @@
+#!/usr/bin/env python3
+#Author sjie
 
 import os
 
-
 def CountLines(name):
-    res = []
-    with open(name, 'r') as target:
-        for line in target.readlines():
-            res.append(line)
-    return len(res)
+    return len([line.rstrip() for line in open(name, 'r').readline()])
+
+
+def CountChars(name):
+    return len([char for char in open(name, 'r').read()])
+
+
+def test(filename):
+    len_line = CountLines(filename)
+    len_chars = CountChars(filename)
+    result_repr = "字符数为%d，行数为%d" % (len_chars, len_line)
+    return result_repr
 
 
 if __name__ == '__main__':
-    a = CountLines('test.txt')
-    print(a)
-    import re
-    re.compile()
+    result = test('test.txt')
+    print(result)
