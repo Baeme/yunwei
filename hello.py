@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
-#Author sjie
+# Author sjie
 
 import os
+
 
 def CountLines(name):
     return len([line.rstrip() for line in open(name, 'r').readline()])
