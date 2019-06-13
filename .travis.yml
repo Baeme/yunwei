@@ -1,0 +1,3 @@
+env:
+  global:
+    - CODECOV_TOKEN=:c770abf8-07fc-4361-b96e-667946a79a3d
