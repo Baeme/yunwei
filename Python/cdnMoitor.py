@@ -29,12 +29,8 @@ class DingTalk():
 
 
 if __name__ == "__main__":
-    urllist = [
-        "na.meimeifa.com",
-        "mmf-wx-ali.meimeifa.com",
-        "mmf-wx-qn.meimeifa.com"
-    ]
-    DingdingWebHook = "https://oapi.dingtalk.com/robot/send?access_token=b6dbaf005f47bce6ce39eec55db822da354208aebf1add7544acb06772227cd8"
+    urllist = ["",""]
+    DingdingWebHook = ""
     for i in range(len(urllist)):
         Instacestatus = PingResult(urllist[i])
         status = Instacestatus.UrlResult()
