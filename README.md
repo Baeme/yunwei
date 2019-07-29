@@ -1,3 +1,2 @@
-#### 收集日常一些脚本包括Python，shell，Golang
-
-##### 不定期更新
+#### 整理日常一些脚本包括Python，shell，Golang
+### 邮箱地址：baemawu@gmail.com
