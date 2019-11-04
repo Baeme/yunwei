@@ -1,0 +1,11 @@
+[node]
+#定义连接主机信息
+192.168.15.16 ansible_ssh_pass="" hostname=node10 machine_type=vm  
+192.168.0.229 ansible_ssh_pass="" hostname=node11 machine_type=vm
+[master]
+#定义委派master主机信息
+192.168.15.39 ansible_ssh_pass=
+[all:vars]
+#定义k8s版本及镜像仓库信息
+k8s_version=""
+local_images=""

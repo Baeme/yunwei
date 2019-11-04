@@ -1,0 +1,5 @@
+- hosts: node
+  roles:
+    - common
+    - docker_kubeadm
+    - join_master

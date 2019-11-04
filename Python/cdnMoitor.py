@@ -29,7 +29,7 @@ class DingTalk():
 
 
 if __name__ == "__main__":
-    urllist = ["",""]
+    urllist = ["", ""]
     DingdingWebHook = ""
     for i in range(len(urllist)):
         Instacestatus = PingResult(urllist[i])
@@ -39,4 +39,5 @@ if __name__ == "__main__":
                 "title": "CDN监控", "text": "#### CDN监控\n" + "- 异常CDN地址: %s\n" % (urllist[i]) }}
             Post = DingTalk(DingdingWebHook, message)
             print(Post.PostMessage())
+
 

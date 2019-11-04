@@ -1,0 +1,12 @@
+- name: 获取master主机join命令
+  shell: kubeadm token create --print-join-command
+  delegate_to: "{{ item }}"
+  with_items: "{{ groups['master'] }}"
+  register: join_token
+  run_once: true
+
+- name: 设置join命令为变量
+  set_fact: join_command={{ join_token.results[0]['stdout'] }}
+
+- name: 执行join命令
+  shell: "{{ join_command }}"
